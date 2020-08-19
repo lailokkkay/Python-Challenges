@@ -14,5 +14,3 @@ for letter in text:
         newWord = True
 
 print(totalWordLength / wordCount)
-
-input()
