@@ -1,4 +1,4 @@
-for i in range(0, 20):
+for i in range(1, 21):
     out = ""
     if i % 3 == 0:
             out += "Fizz"
