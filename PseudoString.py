@@ -130,3 +130,40 @@ for i in range(1 , numberOfQuestions + 1):
     print()
 
 print(f"score = {Score} / {numberOfQuestions}")
+
+##Extension 1
+mylist = ["LEFT", "RIGHT", "MID", "LENGTH", "LCASE", "UCASE", "TO_UPPER", "TO_LOWER", "NUM_TO_STRING", "STRING_TO_NUM",
+          "INT", "ASC"]
+for i in range(0, len(mylist)):
+    print((i + 1), ":", mylist[i])
+select = int(input("Select Function"))
+string = input("Input String")
+length = len(string)
+start = 0
+
+if select == 1:
+    print(LEFT(string))
+elif select == 2:
+    print(RIGHT(string, length))
+elif select == 3:
+    start = int(input("Start from which character"))
+    print(MID(string, start, length))
+elif select == 4:
+    print(LENGTH(string))
+elif select == 5:
+    print(LCASE(string))
+elif select == 6:
+    print(UCASE(string))
+elif select == 7:
+    print(TO_UPPER(string))
+elif select == 8:
+    print(TO_LOWER(string))
+elif select == 9:
+    print(NUM_TO_STRING(string))
+elif select == 10:
+    print(STRING_TO_NUM(string))
+elif select == 11:
+    print(INT(string))
+elif select == 12:
+    char = input("Input character to convert to ASCII")
+    print(ASC(char))
