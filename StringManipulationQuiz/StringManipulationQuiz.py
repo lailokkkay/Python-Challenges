@@ -39,7 +39,7 @@ def QuestionCaller(questionNumber):
         print("Wrong Answer!")
     return passed
 
-def Main():
+def Main(): 
     print("##STRING MANIPULATION TEST##")
     print("Give the value of the variables for the following sequence of statements.")
     print()
@@ -56,7 +56,7 @@ def Main():
     print(f"Final Score = {score}")
 
 ##File Handling
-def WriteHighScore(newScore):
+def WriteHighScore(newScore): ##If a score is in the top (10) of all time, the score is added to the appropriate place and the last score is removed. 
     newScores = []
     placeFound = False
     
@@ -77,8 +77,8 @@ def WriteHighScore(newScore):
         for score in newScores:
             count += 1
             newSave.write(f"{count}) {score}\n")
-    
-def ClearHighScores():
+            
+def ClearHighScores():  ##Clear leaderboard and define places.    
     with open("Highscores.txt", "w") as clearSave:
         places = 10
         count = 0
