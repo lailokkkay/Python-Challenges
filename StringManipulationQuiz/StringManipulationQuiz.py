@@ -33,7 +33,6 @@ def QuestionCaller(questionNumber):
     passed = False
     qData = stringFunctions[random.randint(0,len(stringFunctions) - 1)]()
     print(f"{questionNumber}. x <- {qData[0]}")
-    print(qData[1])
     if qData[1] == input("          x = "):
         passed = True
     else:
