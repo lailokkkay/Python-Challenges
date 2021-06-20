@@ -44,7 +44,3 @@ if Search(board,0,n):
     PrintBoard(board)
 else:
     print("Not possible")
-
-
-
-
