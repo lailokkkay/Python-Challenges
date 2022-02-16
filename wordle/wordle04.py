@@ -1,5 +1,4 @@
 import random
-import time
 import math
 
 class Pattern:
@@ -194,14 +193,14 @@ def LocalWordle():
                         max[0] = e
                         max[1] = word
                 print(f"highest information = {max[1]} {round(max[0], 2)} bits")
-                print(f"possible answers = {realAnswers[0:5]}")
+                print(f"possible answers = {realAnswers[0:10]}")
             if len(realAnswers) == 1:
                 guess = realAnswers[0]
             else:
                 guess = max[1]
         else:
             print(f"highest information = tares {round(Entropy('tares',realAnswers),2)} bits")
-            print(f"possible answers = {realAnswers[0:5]}")
+            print(f"possible answers = {realAnswers[0:10]}")
         print(f"guess = {guess}")
         pattern = CheckGuess(guess, answer)
         possibleWords = NewPossibleWords(pattern, possibleWords)
@@ -256,13 +255,14 @@ def OnlineWordle():
                         max[0] = e
                         max[1] = word
                 print(f"highest information = {max[1]} {round(max[0], 2)} bits")
-                print(f"possible answers = {realAnswers[0:5]}")
+                print(f"possible answers = {realAnswers[0:10]}")
             if len(realAnswers) == 1:
                 guess = realAnswers[0]
             else:
                 guess = max[1]
         else:
-            print(f"highest information = {guess} {Entropy(guess, realAnswers)} bits")    
+            print(f"highest information = {guess} {Entropy(guess, realAnswers)} bits")
+            print(f"possible answers = {realAnswers[0:10]}")
         print(f"guess = {guess}")
         pattern = GetPattern(input("pattern : "), guess)
         possibleWords = NewPossibleWords(pattern, possibleWords)
