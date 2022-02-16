@@ -1,6 +1,11 @@
 import random
 import math
 
+#how to find most informative guess
+#https://www.youtube.com/watch?v=v68zYyaEmEA&t=690s
+
+##Entropy() finds information of word give wordlist in bits
+
 class Pattern:
     def __init__(self):
         self.falseLetters = set()
