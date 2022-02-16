@@ -270,5 +270,7 @@ def OnlineWordle():
         print()
     print(f"score = {guesses}")
 
+# 0 = green, 1 = yellow, 2 = grey
+# 🟩🟩⬛⬛🟨 = 00221
 # OnlineWordle()
 LocalWordle()
