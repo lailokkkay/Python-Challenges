@@ -1,11 +1,6 @@
 import random
 import math
 
-#how to find most informative guess
-#https://www.youtube.com/watch?v=v68zYyaEmEA&t=690s
-
-##Entropy() finds information of word give wordlist in bits
-
 class Pattern:
     def __init__(self):
         self.falseLetters = set()
@@ -181,7 +176,7 @@ def LocalWordle():
     total = len(possibleWords)
     guesses = 0
 
-    guess = "tares"
+    guess = "soare"
     while len(pattern.fixedLetters) < 5:
         print(f"//round {guesses + 1}")
         print(f"remaining words = {len(possibleWords)}")
@@ -204,7 +199,7 @@ def LocalWordle():
             else:
                 guess = max[1]
         else:
-            print(f"highest information = tares {round(Entropy('tares',realAnswers),2)} bits")
+            print(f"highest information = {guess} {round(Entropy(guess, realAnswers),2)} bits")
             print(f"possible answers = {realAnswers[0:10]}")
         print(f"guess = {guess}")
         pattern = CheckGuess(guess, answer)
@@ -244,7 +239,7 @@ def OnlineWordle():
     total = len(possibleWords)
     guesses = 0
 
-    guess = "tares"
+    guess = "soare"
     while len(pattern.fixedLetters) < 5:
         print(f"//round {guesses + 1}")
         print(f"remaining words = {len(possibleWords)}, uncertainty = {round(math.log2(len(possibleWords)),2)} bits")
@@ -275,7 +270,5 @@ def OnlineWordle():
         print()
     print(f"score = {guesses}")
 
-# 0 = green, 1 = yellow, 2 = grey
-# 🟩🟩⬛⬛🟨 = 00221
 # OnlineWordle()
 LocalWordle()
